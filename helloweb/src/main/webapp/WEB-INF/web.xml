@@ -9,15 +9,21 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
-  
   <servlet>
     <servlet-name>HelloServlet</servlet-name>
     <servlet-class>com.markany.helloweb.controler.HelloServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>JoinServlet</servlet-name>
+    <servlet-class>com.markany.helloweb.controler.JoinServlet</servlet-class>
   </servlet>
   
   <servlet-mapping>
     <servlet-name>HelloServlet</servlet-name>
     <url-pattern>/hello</url-pattern>
   </servlet-mapping>
-  
+  <servlet-mapping>
+    <servlet-name>JoinServlet</servlet-name>
+    <url-pattern>/join</url-pattern>
+  </servlet-mapping>
 </web-app>
