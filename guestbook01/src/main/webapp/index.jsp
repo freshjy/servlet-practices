@@ -6,6 +6,7 @@
 
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%
+	request.setCharacterEncoding("utf-8");
 	List<GuestbookVo> list = new GuestbookDao().findAll();	
 %>
 <!DOCTYPE html>
@@ -32,11 +33,13 @@
 	<br>
 	
 	<%
+		int count = list.size();
+		int index=0;
 		for(GuestbookVo vo : list){
 	%>
 	<table width=510 border=1>
 		<tr>
-			<td><%=vo.getNo() %></td>
+			<td>[<%=count-index++%>]</td>
 			<td><%=vo.getName() %></td>
 			<td><%=vo.getReg_date() %></td>
 			<td><a href="/guestbook01/deleteform.jsp?no=<%=vo.getNo()%>">삭제</a></td>
