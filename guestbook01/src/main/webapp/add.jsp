@@ -13,6 +13,7 @@
 	String name = request.getParameter("name");
 	String password = request.getParameter("password");
 	String message = request.getParameter("message");
+	message = message.replace("\r\n", "<br>");
 	String reg_date = sdf.format(cal.getTime());
 	
 	GuestbookVo vo = new GuestbookVo();
@@ -32,5 +33,6 @@
 </head>
 <body>
 	<h1>등록</h1>
+	<%=message %>
 </body>
 </html>
