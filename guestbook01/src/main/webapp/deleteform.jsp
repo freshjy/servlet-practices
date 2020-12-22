@@ -9,9 +9,9 @@
 <title>방명록</title>
 </head>
 <body>
-	<form method=POST action="delete.jsp">
-		<input type='hidden' name='no' value=<%=no%>>
-		<table> 
+	<form method="get" action="delete.jsp">
+		<input type='hidden' name='no' value='<%=request.getParameter("no") %>'>
+		<table>
 			<tr>
 				<td>비밀번호</td>
 				<td><input type="password" name="password"></td>
