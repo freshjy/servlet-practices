@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%
-	//복사해
-
+	int row = Integer.parseInt(request.getParameter("r"));
+	int col = Integer.parseInt(request.getParameter("c"));
 %>
 <!DOCTYPE html>
 <html>
@@ -10,6 +10,22 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+	<table border='1', cellspacing='0' cellpadding='3'>
+		<%
+			for(int i = 0; i < row; i++) {
+		%>
+			<tr>
+				<%
+					for(int j = 0; j < col; j++) {
+				%>
+					<td>cell(<%=i %>, <%=j %>)</td>
+				<%
+					}
+				%>
+			</tr>
+		<%
+			}
+		%>
+	</table>
 </body>
 </html>
