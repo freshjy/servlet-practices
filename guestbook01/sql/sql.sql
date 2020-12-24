@@ -3,7 +3,7 @@ desc guestbook;
 -- insert
 insert
 	into guestbook
-values(null, '안대혁',  '1234', '안녕하세요~', now());
+values(null, '백정엽',  '1234', '안녕하세요~', now());
 
 
 -- select
@@ -14,5 +14,5 @@ order by reg_date desc;
 -- delete
 delete 
 	from guestbook
-where no = 1
+where no = 4
 	and password ='1234';
