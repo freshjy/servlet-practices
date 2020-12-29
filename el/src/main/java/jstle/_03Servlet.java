@@ -33,7 +33,7 @@ public class _03Servlet extends HttpServlet {
 		list.add(vo3);
 		
 		request.setAttribute("list", list);		
-		request.getRequestDispatcher("/WEB-INF/views/03.jsp").forward(request, response);;
+		request.getRequestDispatcher("/WEB-INF/views/03.jsp").forward(request, response);
 		
 		
 	}
